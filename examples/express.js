@@ -3,9 +3,7 @@ var express = require('express')
   , SNSClient = require('../');
 
 var auth = {
-    region: 'us-east-1'
-  , account: 'xxx'
-  , topic: 'topic-name'
+    TopicArn: 'topic-name'
 }
 var client = SNSClient(auth, function(err, message) {
     if (err) {

@@ -49,9 +49,7 @@ var client = SNSClient(auth, function(err, message) {
 ### Verify all credentials
 ```javascript
 var auth = {
-    region: 'us-east-1'
-  , account: 'xxx'
-  , topic: 'xxx'
+  TopicArn: 'xxx'
 };
 var client = SNSClient(auth, function(err, message) {
     console.log(message);
@@ -65,9 +63,7 @@ var express = require('express')
   , SNSClient = require('aws-snsclient');
 
 var auth = {
-    region: 'us-east-1'
-  , account: 'xxx'
-  , topic: 'xxx'
+  TopicArn: 'xxx'
 }
 var client = SNSClient(auth, function(err, message) {
     console.log(message);
