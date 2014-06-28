@@ -1,20 +1,29 @@
 {
-  "name": "aws-snsclient",
+  "name": "aws-snsclient2",
   "description": "A client for parsing Amazon AWS SNS requests.",
   "keywords": ["amazon", "aws", "sns", "client"],
-  "version": "0.2.0",
-  "repository": "git://github.com/mattrobenolt/node-snsclient.git",
-  "author": "Matt Robenolt <matt@ydekproductions.com> (http://mattrobenolt.com)",
+  "version": "0.2.1",
+  "repository": "git://github.com/rwky/node-snsclient.git",
+  "author": {
+    "name": "Rowan Wookey",
+    "email": "admi@rwky.net",
+    "url": "http://www.rwky.net"
+  },
+  "contributors": [ {
+    "name": "Matt Robenolt",
+    "email": "matt@ydekproductions.com",
+    "url": "http://mattrobenolt.com"
+  }],
   "main": "./index",
   "bugs": {
-    "url": "https://github.com/mattrobenolt/node-snsclient/issues"
+    "url": "https://github.com/rwky/node-snsclient/issues"
   },
   "directories": {
     "lib": "lib",
     "example": "examples"
   },
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">= 0.10.0"
   },
   "dependencies": {}
 }
