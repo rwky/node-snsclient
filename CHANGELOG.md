@@ -1,3 +1,8 @@
+# 0.5.0 (2016-02-25)
+
+* Expose validateRequest method 
+* Update express docs
+
 ## 0.4.1
 
 * Started changelog

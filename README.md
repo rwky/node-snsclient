@@ -57,6 +57,9 @@ var client = SNSClient(auth, function(err, message) {
 ```
 
 ## Use with Express
+
+You should incude the body-parser module and use it to parse JSON.
+
 ```javascript
 var express = require('express')
   , app = express.createServer()
@@ -65,11 +68,12 @@ var express = require('express')
 var auth = {
   TopicArn: 'xxx'
 }
-var client = SNSClient(auth, function(err, message) {
-    console.log(message);
-});
 
-app.post('/receive', client);
+app.post('/receive', function(req, res, next) { 
+    SNSClient.validateRequest(auth, req.body, function(err) {
+        //do something
+    });
+});
 
 app.listen(9000);
 ```
