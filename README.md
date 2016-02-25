@@ -63,13 +63,14 @@ You should incude the body-parser module and use it to parse JSON.
 ```javascript
 var express = require('express')
   , app = express.createServer()
-  , SNSClient = require('aws-snsclient');
+  , SNSClient = require('aws-snsclient')
+  , bodyParser = require('body-parser');
 
 var auth = {
   TopicArn: 'xxx'
 }
 
-app.post('/receive', function(req, res, next) { 
+app.post('/receive', bodyParser.json({ type: 'text/plain' }), function(req, res, next) { 
     SNSClient.validateRequest(auth, req.body, function(err) {
         //do something
     });
